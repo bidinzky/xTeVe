@@ -806,7 +806,7 @@ func connectToStreamingServer(streamID int, playlistID string) {
 			switch contentType {
 
 			// M3U8 Playlist
-			case "application/x-mpegurl", "application/vnd.apple.mpegurl", "audio/mpegurl", "audio/x-mpegurl":
+			case "application/x-mpegurl", "application/vnd.apple.mpegurl", "audio/mpegurl", "audio/x-mpegurl", "application/m3u8":
 				body, err := ioutil.ReadAll(resp.Body)
 				if err != nil {
 					ShowError(err, 0)
